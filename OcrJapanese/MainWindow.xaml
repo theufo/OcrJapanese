@@ -1,0 +1,88 @@
+﻿<Window x:Class="OcrJapanese.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Button Grid.Row ="0"
+                Grid.Column="0"
+                Content="Scan"
+                Click="ButtonScan_Click" />
+        <Button Grid.Row ="0"
+                Grid.Column="1"
+                Content="Open"
+                Click="ButtonOpen_Click" />
+        <Button Grid.Row ="0"
+                Grid.Column="2"
+                Content="Show Image"
+                Click="ButtonShow_Click" />
+        <TextBlock Grid.Row ="0"
+                   Grid.Column="3"
+                   Grid.ColumnSpan="2"
+                   Text="FilePath"
+                   x:Name="FilePathTextBlock" />
+
+        <TextBox Grid.Row="1"
+                 Grid.Column="0" Grid.RowSpan="4"
+                 x:Name="TextBlockMainKanji"
+                 TextWrapping="Wrap"
+                   Text="MainKanji"
+                 FontSize="50"/>
+        <TextBox Grid.Row="3"
+                 Grid.Column="0" 
+                 x:Name="TextBlockSub1"
+                 TextWrapping="Wrap"
+                   Text="Sub1"/>
+        <TextBox Grid.Row="3"
+                 Grid.Column="1" 
+                 x:Name="TextBlockSub2"
+                 TextWrapping="Wrap"
+                   Text="Sub"/>
+        <TextBox Grid.Row="1"
+                 Grid.Column="2" Grid.ColumnSpan="4"
+                 x:Name="TextBlockEnglish"
+                 TextWrapping="Wrap"
+                   Text="English"/>
+        <TextBox Grid.Row="2"
+                 Grid.Column="2" Grid.ColumnSpan="2"
+                 x:Name="TextBlockJapanese"
+                 TextWrapping="Wrap"
+                   Text="Japanse"/>
+
+        <TextBox Grid.Row="4"
+                 Grid.Column="3" 
+                 x:Name="TextBlockTranslate1Japanese"
+                 TextWrapping="Wrap"
+                   Text="Translate1"/>
+        <TextBox Grid.Row="4"
+                 Grid.Column="4" 
+                 x:Name="TextBlockTranslate1AJapanese"
+                 TextWrapping="Wrap"
+                   Text="Translate1A"/>
+        <TextBox Grid.Row="4"
+                 Grid.Column="5" 
+                 x:Name="TextBlockTranslate1English"
+                 TextWrapping="Wrap"
+                   Text="Translate1English"/>
+    </Grid>
+</Window>
